@@ -1,0 +1,15 @@
+{
+  "short_name": "Serpost Alt",
+  "name": "Serpost",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#34495e",
+  "background_color": "#2980b9"
+}
