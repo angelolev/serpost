@@ -1,0 +1,20 @@
+.search-results {
+  .item {
+    @include breakpoint($sm) {
+      text-align: center;
+    }
+    &__feature {
+      @include breakpoint($sm) {
+        display: inline-block;
+        width: 170px;
+        text-align: left;
+      }
+    }
+
+    &__description {
+      @include breakpoint($sm) {
+        display: inline-block;
+      }
+    }
+  }
+}

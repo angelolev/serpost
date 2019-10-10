@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #fff;
+
+  &.dark-mode {
+    background: #34495e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p {
+  margin: 0;
+  color: #3c3c3c;
+}
+
+input,
+select {
+  border: 1px solid #6e6c6c;
+  outline: none;
+  width: 100%;
+  max-width: 310px;
+  margin: 8px auto;
+  padding: 8px 15px;
+  text-transform: uppercase;
+}
+
+input:read-only {
+  background: #dddddd4f;
+}
+
+button {
+  background: #55acee;
+  padding: 10px;
+  border: 0;
+  font-weight: bold;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+
+  @include breakpoint($md) {
+    box-shadow: 0px 5px 0px 0px #3c93d5;
+    margin-top: 10px;
+  }
+
+  &:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+
+  &:hover {
+    background: #6fc6ff;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border: 1px solid #3c3c3c;
+
+  @include breakpoint($sm) {
+    margin-bottom: 20px;
+  }
+}

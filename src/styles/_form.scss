@@ -1,0 +1,42 @@
+form {
+  .form-group {
+    &.year {
+      @include breakpoint($sm) {
+        display: inline-block;
+        width: 20%;
+        margin-right: 15px;
+      }
+    }
+
+    &.tracking {
+      @include breakpoint($sm) {
+        display: inline-block;
+        width: 50%;
+        margin-right: 15px;
+      }
+    }
+
+    &.cta {
+      margin-top: 15px;
+      @include breakpoint($sm) {
+        display: inline-block;
+        width: 20%;
+        margin-top: 0;
+      }
+    }
+    label,
+    input {
+      display: block;
+
+      @include breakpoint($sm) {
+        display: inline-block;
+      }
+    }
+
+    label {
+    }
+
+    select {
+    }
+  }
+}
