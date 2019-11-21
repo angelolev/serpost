@@ -4,7 +4,7 @@ class Select extends Component {
   render() {
     return (
       <select name="country" id="country">
-        <option value="" selected>
+        <option value="" defaultValue>
           2019
         </option>
         <option value="">2018</option>

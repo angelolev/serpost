@@ -2,6 +2,7 @@
   "name": "serpost",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:50674/api/",
   "homepage": "https://angelolev.github.io/serpost",
   "dependencies": {
     "gh-pages": "^2.1.1",
@@ -33,6 +34,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.19.0",
     "node-sass": "^4.12.0"
   }
 }
