@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0fbef6d6d9982e7cff211f3b2792482d",
+    "revision": "1b3e7dc8ec5fcb972746566c9fd3b074",
     "url": "/serpost/index.html"
   },
   {
-    "revision": "4804039c902fcd17cca9",
+    "revision": "b0f7175ae7f720c8f35a",
     "url": "/serpost/static/css/main.883f127b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/serpost/static/js/2.4c885759.chunk.js"
   },
   {
-    "revision": "4804039c902fcd17cca9",
-    "url": "/serpost/static/js/main.778a4d59.chunk.js"
+    "revision": "b0f7175ae7f720c8f35a",
+    "url": "/serpost/static/js/main.2cf3203a.chunk.js"
   },
   {
     "revision": "f70b90dee0186470c015",
