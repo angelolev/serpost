@@ -2,8 +2,8 @@
   "name": "serpost",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:50674/api/",
   "homepage": "https://angelolev.github.io/serpost",
+  "proxy": "https://serpostapi20191121050851.azurewebsites.net/api/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",

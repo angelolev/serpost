@@ -11,6 +11,12 @@ export function Form(props) {
   const handleSubmit = evt => {
     evt.preventDefault();
 
+    var data = {
+      Anio: year,
+      Filtro: 0,
+      Tracking: tracking
+    };
+
     Axios.post("serpost", {
       Anio: year,
       Filtro: 0,
@@ -19,8 +25,8 @@ export function Form(props) {
       .then(function(response) {
         console.log(response);
       })
-      .catch(function(response) {
-        console.log(response);
+      .catch(function(error) {
+        console.log(error.response);
       })
       .finally(function(response) {});
   };
