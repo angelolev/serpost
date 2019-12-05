@@ -3,6 +3,7 @@
     @include breakpoint($sm) {
       text-align: center;
     }
+
     &__feature {
       @include breakpoint($sm) {
         display: inline-block;
@@ -11,7 +12,10 @@
       }
     }
 
-    &__description {
+    textarea {
+      width: 100%;
+      resize: none;
+
       @include breakpoint($sm) {
         display: inline-block;
       }

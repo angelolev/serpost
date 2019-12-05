@@ -1,0 +1,23 @@
+.history {
+  &__date {
+    @include breakpoint($sm) {
+      display: inline-block;
+      min-width: 250px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include breakpoint($sm) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      min-height: 80px;
+    }
+  }
+}

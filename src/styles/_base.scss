@@ -27,7 +27,8 @@ p {
 }
 
 input,
-select {
+select,
+textarea {
   border: 1px solid #6e6c6c;
   outline: none;
   width: 100%;
@@ -35,6 +36,7 @@ select {
   margin: 8px auto;
   padding: 8px 15px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 input:read-only {

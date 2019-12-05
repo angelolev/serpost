@@ -1,73 +1,137 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-export function Form(props) {
+export default function Form(props) {
   let today = new Date();
   let currentYear = today.getFullYear();
 
   const [tracking, setTracking] = useState("");
   const [year, setYear] = useState(currentYear.toString());
+  const [data, setData] = useState({
+    origin: "",
+    status: "",
+    tracking: "",
+    destiny: "",
+    type: "",
+    notice: "",
+    notes: "",
+    detail: []
+  });
 
   const handleSubmit = evt => {
     evt.preventDefault();
 
-    var data = {
-      Anio: year,
-      Filtro: 0,
-      Tracking: tracking
-    };
-
-    Axios.post("serpost", {
-      Anio: year,
-      Filtro: 0,
-      Tracking: tracking
-    })
+    Axios.post(
+      "https://serpostapi20191121050851.azurewebsites.net/api/serpost",
+      {
+        Anio: year,
+        Filtro: 0,
+        Tracking: tracking
+      }
+    )
       .then(function(response) {
-        console.log(response);
+        console.log(response.data);
+        setData({
+          origin: response.data.origen,
+          status: response.data.estadoEnvio,
+          tracking: response.data.nroTracking,
+          destiny: response.data.destino,
+          type: response.data.tipoEnvio,
+          notice: "",
+          notes: response.data.observacion,
+          detail: response.data.detalle
+        });
       })
       .catch(function(error) {
         console.log(error.response);
-      })
-      .finally(function(response) {});
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Datos de búsqueda</h2>
-      <hr />
-      <div className="form-group year">
-        <label htmlFor="country">Año del envío</label>
-        <select
-          name="country"
-          id="country"
-          value={year}
-          onChange={e => setYear(e.target.value)}
-        >
-          <option value="2019" defaultValue>
-            2019
-          </option>
-          <option value="2018">2018</option>
-          <option value="2017">2017</option>
-          <option value="2016">2016</option>
-          <option value="2015">2015</option>
-          <option value="2014">2014</option>
-          <option value="2013">2013</option>
-        </select>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h2>Datos de búsqueda</h2>
+        <hr />
+        <div className="form-group year">
+          <label htmlFor="country">Año del envío</label>
+          <select
+            name="country"
+            id="country"
+            value={year}
+            onChange={e => setYear(e.target.value)}
+          >
+            <option value="2019" defaultValue>
+              2019
+            </option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+          </select>
+        </div>
+        <div className="form-group tracking">
+          <label htmlFor="tracking">Nro de tracking</label>
+          <input
+            type="text"
+            className="form-input"
+            value={tracking}
+            onChange={e => setTracking(e.target.value)}
+          />
+        </div>
+        <div className="form-group cta">
+          <button id="btn-search">Buscar</button>
+        </div>
+      </form>
+
+      <div className="search-results">
+        <h2>Resultados de búsqueda</h2>
+        <hr />
+        <div className="item">
+          <p className="item__feature">Origen</p>
+          <textarea value={data.origin} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Estado del Envío</p>
+          <textarea value={data.status} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Nro Tracking</p>
+          <textarea value={data.tracking} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Destino</p>
+          <textarea value={data.destiny} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Tipo de Envío</p>
+          <textarea value={data.type} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Nro de Aviso</p>
+          <textarea value={data.notice} readOnly />
+        </div>
+        <div className="item">
+          <p className="item__feature">Observación</p>
+          <textarea value={data.observacion} readOnly />
+        </div>
       </div>
-      <div className="form-group tracking">
-        <label htmlFor="tracking">Nro de tracking</label>
-        <input
-          type="text"
-          className="form-input"
-          value={tracking}
-          onChange={e => setTracking(e.target.value)}
-        />
+
+      <div className="history">
+        <h2>Historial</h2>
+        <hr />
+        {data.detail.map(detail => (
+          <div>
+            <div className="history__date">
+              <p>Fecha: {detail.fecha}</p>
+            </div>
+            <div className="history__description">
+              <textarea value={detail.descripcion} readOnly />
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="form-group cta">
-        <button id="btn-search">Buscar</button>
-      </div>
-    </form>
+    </div>
   );
 }
-
-export default Form;
