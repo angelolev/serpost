@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import Swal from "sweetalert2";
 
 export default function Form(props) {
   let today = new Date();
   let currentYear = today.getFullYear();
 
   const [tracking, setTracking] = useState("");
+  const [register, setRegister] = useState({
+    isRegistered: false
+  });
   const [year, setYear] = useState(currentYear.toString());
   const [data, setData] = useState({
     origin: "",
@@ -30,7 +34,6 @@ export default function Form(props) {
       }
     )
       .then(function(response) {
-        console.log(response.data);
         setData({
           origin: response.data.origen,
           status: response.data.estadoEnvio,
@@ -41,9 +44,30 @@ export default function Form(props) {
           notes: response.data.observacion,
           detail: response.data.detalle
         });
+
+        Swal.fire({
+          title: "Encontrado!",
+          text: "Aqui esta la info de tu paquete",
+          icon: "success",
+          confirmButtonText: "Ok"
+        });
+
+        let hasDetail = response.data.detalle.length;
+        if (hasDetail) {
+          setRegister({
+            isRegistered: true
+          });
+        }
       })
       .catch(function(error) {
         console.log(error.response);
+
+        Swal.fire({
+          title: "Error!",
+          text: "Aun no tenemos data de tu paquete",
+          icon: "error",
+          confirmButtonText: "Ok"
+        });
       });
   };
 
@@ -124,7 +148,7 @@ export default function Form(props) {
         {data.detail.map(detail => (
           <div>
             <div className="history__date">
-              <p>Fecha: {detail.fecha}</p>
+              <p>{detail.fecha}</p>
             </div>
             <div className="history__description">
               <textarea value={detail.descripcion} readOnly />
