@@ -1,14 +1,23 @@
 .search-results {
+  padding-top: 30px;
   .item {
     @include breakpoint($sm) {
       text-align: center;
     }
 
     &__feature {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+
       @include breakpoint($sm) {
         display: inline-block;
         width: 170px;
         text-align: left;
+      }
+
+      .icon {
+        margin-right: 10px;
       }
     }
 

@@ -47,7 +47,7 @@ export default function Form(props) {
 
         Swal.fire({
           title: "Encontrado!",
-          text: "Aqui esta la info de tu paquete",
+          text: "Aquí esta la info de tu paquete",
           icon: "success",
           confirmButtonText: "Ok"
         });
@@ -102,6 +102,7 @@ export default function Form(props) {
             className="form-input"
             value={tracking}
             onChange={e => setTracking(e.target.value)}
+            required
           />
         </div>
         <div className="form-group cta">
@@ -113,32 +114,46 @@ export default function Form(props) {
         <h2>Resultados de búsqueda</h2>
         <hr />
         <div className="item">
-          <p className="item__feature">Origen</p>
-          <textarea value={data.origin} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-origen"></i>Origen
+          </p>
+          <textarea value={data.origin} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Estado del Envío</p>
-          <textarea value={data.status} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-estado"></i>Estado del Envío
+          </p>
+          <textarea value={data.status} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Nro Tracking</p>
-          <textarea value={data.tracking} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-tracking"></i>Nro Tracking
+          </p>
+          <textarea value={data.tracking} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Destino</p>
-          <textarea value={data.destiny} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-destino"></i>Destino
+          </p>
+          <textarea value={data.destiny} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Tipo de Envío</p>
-          <textarea value={data.type} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-tipo"></i>Tipo de Envío
+          </p>
+          <textarea value={data.type} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Nro de Aviso</p>
-          <textarea value={data.notice} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-aviso"></i>Nro de Aviso
+          </p>
+          <textarea value={data.notice} readOnly rows="1" />
         </div>
         <div className="item">
-          <p className="item__feature">Observación</p>
-          <textarea value={data.observacion} readOnly />
+          <p className="item__feature">
+            <i className="icon icon-observacion"></i>Observación
+          </p>
+          <textarea value={data.observacion} readOnly rows="2" />
         </div>
       </div>
 
@@ -148,7 +163,10 @@ export default function Form(props) {
         {data.detail.map(detail => (
           <div>
             <div className="history__date">
-              <p>{detail.fecha}</p>
+              <p>
+                <i className="icon icon-check"></i>
+                {detail.fecha}
+              </p>
             </div>
             <div className="history__description">
               <textarea value={detail.descripcion} readOnly />

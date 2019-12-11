@@ -1,9 +1,15 @@
 .history {
   &__date {
+    padding: 10px 0;
     @include breakpoint($sm) {
       display: inline-block;
       min-width: 250px;
       text-align: center;
+    }
+
+    .icon {
+      color: #2ecc71;
+      margin-right: 10px;
     }
   }
 

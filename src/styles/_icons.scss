@@ -26,15 +26,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-moon:before {
-  content: "\e900";
+.icon-observacion:before {
+  content: "\e926";
 }
-.icon-sun:before {
-  content: "\e9d4";
+.icon-destino:before {
+  content: "\e947";
+  color: #e74c3c;
 }
-.icon-arrow-right:before {
-  content: "\ea3c";
+.icon-estado:before {
+  content: "\e986";
+  color: #34495e;
 }
-.icon-menu:before {
-  content: "\e9bd";
+.icon-origen:before {
+  content: "\e9af";
+  color: #34495e;
+}
+.icon-tracking:before {
+  content: "\e9b8";
+  color: #34495e;
+}
+.icon-aviso:before {
+  content: "\e9b9";
+  color: #34495e;
+}
+.icon-tipo:before {
+  content: "\e9bb";
+  color: #34495e;
+}
+.icon-check:before {
+  content: "\ea11";
 }

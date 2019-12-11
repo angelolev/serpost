@@ -12,7 +12,7 @@ class Nav extends Component {
           <img src={logo} alt="" />
         </div>
         <div className="nav__title">
-          <p>Serpost</p>
+          <p>Trackpe</p>
         </div>
       </nav>
     );
