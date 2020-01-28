@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/serpost/static/css/main.b549a72f.chunk.css",
+    "main.css": "/serpost/static/css/main.9e1f2f17.chunk.css",
     "main.js": "/serpost/static/js/main.22dad4ec.chunk.js",
     "main.js.map": "/serpost/static/js/main.22dad4ec.chunk.js.map",
     "runtime-main.js": "/serpost/static/js/runtime-main.45accb11.js",
@@ -8,9 +8,9 @@
     "static/js/2.489c0ad7.chunk.js": "/serpost/static/js/2.489c0ad7.chunk.js",
     "static/js/2.489c0ad7.chunk.js.map": "/serpost/static/js/2.489c0ad7.chunk.js.map",
     "index.html": "/serpost/index.html",
-    "precache-manifest.4e7156a5e34cca854618ff62794f429c.js": "/serpost/precache-manifest.4e7156a5e34cca854618ff62794f429c.js",
+    "precache-manifest.1a4e29d53a3f0eaf1b0978ee1af40539.js": "/serpost/precache-manifest.1a4e29d53a3f0eaf1b0978ee1af40539.js",
     "service-worker.js": "/serpost/service-worker.js",
-    "static/css/main.b549a72f.chunk.css.map": "/serpost/static/css/main.b549a72f.chunk.css.map",
+    "static/css/main.9e1f2f17.chunk.css.map": "/serpost/static/css/main.9e1f2f17.chunk.css.map",
     "static/media/styles.scss": "/serpost/static/media/icomoon.f38c905a.svg",
     "static/media/logo.svg": "/serpost/static/media/logo.f53ae75f.svg",
     "static/media/moon.svg": "/serpost/static/media/moon.a409ed92.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.45accb11.js",
     "static/js/2.489c0ad7.chunk.js",
-    "static/css/main.b549a72f.chunk.css",
+    "static/css/main.9e1f2f17.chunk.css",
     "static/js/main.22dad4ec.chunk.js"
   ]
 }
