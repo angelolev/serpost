@@ -2,11 +2,35 @@
   box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 5px;
   position: fixed;
   width: 100%;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__color-mode {
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+    }
+
+    p {
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+  }
 
   &__icon {
     .icon {

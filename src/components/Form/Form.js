@@ -84,9 +84,10 @@ export default function Form(props) {
             value={year}
             onChange={e => setYear(e.target.value)}
           >
-            <option value="2019" defaultValue>
-              2019
+            <option value="2020" defaultValue>
+              2020
             </option>
+            <option value="2019">2019</option>
             <option value="2018">2018</option>
             <option value="2017">2017</option>
             <option value="2016">2016</option>

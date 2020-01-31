@@ -8,12 +8,6 @@ export default function App() {
     <div className="App">
       <header>
         <NavBar />
-        <div className="colorMode">
-          <i className="icon icon-moon">
-            {" "}
-            <span>Color Mode</span>
-          </i>
-        </div>
       </header>
       <div className="content">
         <Form />
